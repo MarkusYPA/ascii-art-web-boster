@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ascii Art</title>
+</head>
+
+<body>
+
+
+    <h1>ASCII Art Maker</h1><br>
+
+    <form action="/" method="post">
+
+        <h4>Input:</h4>
+        <textarea id="usertext" name="usertext" rows="6" class="txt-input">{{.Txt}}</textarea><br><br>
+
+        <h4>Style:</h4>
+        <input type="radio" id="standard" name="banner" value="standard" checked>
+        <label for="standard">Standard</label>
+        <input type="radio" id="shadow" name="banner" value="shadow">
+        <label for="shadow">Shadow</label>
+        <input type="radio" id="thinkertoy" name="banner" value="thinkertoy">
+        <label for="thinkertoy">Thinkertoy</label><br><br>
+
+        <input type="submit" value="Generate ASCII Art">
+
+        <br><br>
+
+    </form>
+
+    <h4>Result:</h4>
+    <p class="error-message">{{ .ErrorMessage }}</p>
+    <pre id="output">{{.Out}}</pre>
+
+</body>
+
+</html>
